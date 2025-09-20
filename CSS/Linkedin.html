@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkedin Login Page</title>
+    <style>
+      .img{
+        padding:10px;
+
+      }
+      .form{
+        margin-left:500px;
+        padding-left:120px;
+        padding-right:50px;
+       
+        border: 1px black solid;
+        width:300px;
+    
+      
+
+      }
+      .round-box{
+        padding-left: 40px;
+        border: 1px black solid;
+        border-radius: 5cap;
+        width: 200px;
+       margin-bottom: 5px;
+       display: block;
+      }
+      .input{
+
+        margin-left: 4px;
+      
+        border: 1px black solid;
+     
+        width: 230px;
+       margin-bottom: 5px;
+       display: block;
+
+      }
+    </style>
+  </head>
+  <body> 
+    <div class="img">
+    <img height="30" src="https://upload.wikimedia.org/wikipedia/commons/a/aa/LinkedIn_2021.svg">
+    </div>
+    <div class="form">
+      <h1>Sign in</h1>
+      <div class="round-box">
+        <img height="15px" style="padding-top:5px ;"  src="data:image/png;base64,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">
+        <span style="padding-bottom:6px ;">Continue with Google</span>
+      </div>
+        <div class="round-box">
+        <img height="15px" style="padding-top:5px ;"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAgVBMVEX/////uQEBpO9/ugDyUCL//v8AoO////3/tQB4twD/7sHzTiL///z72tDk8MmN0vb+6rjK6vvB3YvY6rT3rZryRQvA6Pu24/rf7sEBpe76//8AoOz/+//518n4qJP67ejp9dzvPAD5+ejZ8Prr+fj89uIAnO6F0vP86bG/5f7++fDYoUMTAAACL0lEQVR4nO3cy05bMRiFUUNx3IApUEgLh/u1tO//gPUhFZ1WYqsKaH1ibHnZThjlL0WSJEmSJEmSJEmS/rHWWq+B1ovVXucVU9XaA8KLt6/xulYZ0N6CC7YaWKRcXp1kurqufT74m6+pblrguHq5ul1lur0cq/VSj5epTgOPdLyrk9VOoL2dvdX+eBHj73j5KdPytATukJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkPD9Ccss3Av0R1g3U5hpQ4XzK01c4Whjhbnf478KY7/Hj7zSdr2f6qIPYK93X1LdlczIgcQqZT1D5OUOE4NEXop8zQzhNKVGkUxjS33cYmq90hOH/7JS7NTn5UpsfktJDP4o48RrbEd1fBAz21rvbXyoA6tMmSOf1xr7GZ/q4Im1xHdpCw4FupiJdXr7pv5uLnGH9f57qoc63199PAz1/Bi5w37wtAh0fr54Olq/rMPPqXYT/zCGcLEd6Oxs+/xVuJXp4wu3CP+rcERISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEj47oSLTRW2H5Hf44+ejvo8MKI8536PPwVmKtR+//NbqIdae2/lcTfVr564w6nE5sm0Os0DTkKDNkpoPs049si0lfk59TZeVW60SZvHbCT2JkmSJEmSJEmSJEkfpN90CIpO9TYYXgAAAABJRU5ErkJggg==">
+        <span style="padding-bottom:6px ;">Continue with Microsoft</span>
+      </div>
+        <div class="round-box">
+        <img height="15px" style="padding-top:5px ;"  src="data:image/jpeg;base64,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">
+        <span style="padding-bottom:6px ;">Continue with Apple</span>
+      </div>
+      <hr style="margin-right: 50px;" width="250px" />
+      <input class ="input " type="text" placeholder="email or phone">
+       <input class ="input" type="password" placeholder="password">
+       <label style="color:blue;font-size: 12px;">Forgot  Password</label><br>
+       <input type="checkbox" ><span style="font-size: 12px;">Keep me logged in</span>
+     
+        <INPUT   style="  margin-bottom:15px; border-radius:5cap; background-color: #004182; width:240px; color:white;"TYPE="BUTTON" VALUE="Sign in">
+
+
+    </div>
+  </body>
+</html>
