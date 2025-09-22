@@ -8,5 +8,17 @@
   </head>
   <body>
     <h1 id="name">Hello World</h1>
+    <button onclick="fun1()">Change Text</button>
+    <script>
+      function fun1() {
+        let temp = document.getElementById("name").innerHTML;
+
+        if (temp === "Hello World") {
+          document.getElementById("name").innerHTML = "Pranav";
+        } else {
+          document.getElementById("name").innerHTML = "Hello World";
+        }
+      }
+    </script>
   </body>
 </html>

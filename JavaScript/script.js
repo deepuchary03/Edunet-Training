@@ -16,5 +16,18 @@ function fun() {
   console.log(obj2);
   console.log(obj3);
 }
-fun();
-document.write(fun());
+const a = (a, b) => console.log(a + b);
+// console.log(a(2,3));
+a(2, 3);
+// fun();
+
+let name = "ani";
+function fun1() {
+  let name = "pranav";
+  document.write(name);
+  console.log(name);
+}
+console.log(name);
+document.write(name);
+fun1();
+document.getElementById("name").innerHTML = "Pranav";
