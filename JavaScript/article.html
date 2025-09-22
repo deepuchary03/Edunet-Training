@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box{
+            border:3px solid black;
+            height:600px;
+            width: 300px;
+        }
+        .cont{ 
+            display:flex;
+            gap:20px;
+        }
+        img{
+             width: 300px;
+             height:200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+    <div class ="box">
+        <img src="./t.jpg">
+        <button style="background-color: skyblue;"onclick="changebg()">change background Color</button>
+        <p>Tirupati is a city in Andhra Pradesh, India, known for the Tirumala Venkateswara Temple, a popular Hindu pilgrimage site located on the Tirumala Hills. The city also features Sri Venkateswara University, Sri Kapileswara Swamy Temple, and the Sri Venkateswara Zoological Park. Recently, political allegations have surfaced regarding a rs 100-crore theft from the temple's donation box during a previous government's tenure</p>
+    </div>
+       <div  class ="box">
+        <img src="./s.jpg">
+            <button style="background-color: orange;" onclick="changebg2()">change background Color</button>
+        <p>Srisailam is a renowned pilgrimage town in the Nandyal district of Andhra Pradesh, famous for the Sri Bhramaramba Mallikarjuna Swamy Temple. The temple is a rare and highly significant site, as it is revered as both one of the twelve Jyotirlingas (shrines of Lord Shiva) and one of the eighteen Maha Shakti Peethas (shrines of the Goddess Shakti).</p>
+    </div>
+       <div  class ="box">
+        <img src="./t.jpg">
+            <button style="background-color: lightgreen;"  onclick="changebg3()">change background Color</button>
+        <p>Tirupati is a city in Andhra Pradesh, India, known for the Tirumala Venkateswara Temple, a popular Hindu pilgrimage site located on the Tirumala Hills. The city also features Sri Venkateswara University, Sri Kapileswara Swamy Temple, and the Sri Venkateswara Zoological Park. Recently, political allegations have surfaced regarding a rs 100-crore theft from the temple's donation box during a previous government's tenure</p>
+    </div>
+       <div  class ="box">
+        <img src="./t.jpg">
+            <button style="background-color: grey;"  onclick="changebg4()">change background Color</button>
+        <p>Tirupati is a city in Andhra Pradesh, India, known for the Tirumala Venkateswara Temple, a popular Hindu pilgrimage site located on the Tirumala Hills. The city also features Sri Venkateswara University, Sri Kapileswara Swamy Temple, and the Sri Venkateswara Zoological Park. Recently, political allegations have surfaced regarding a rs 100-crore theft from the temple's donation box during a previous government's tenure</p>
+    </div>
+</div>
+    <script>
+
+        function changebg() {
+         
+        document.body.style.backgroundColor = "skyblue";
+        document.body.style.color = "red";
+      }
+       function changebg2() {
+         
+        document.body.style.backgroundColor = "orange";
+        document.body.style.color = "white";
+      }
+       function changebg3() {
+         
+        document.body.style.backgroundColor = "lightgreen";
+        document.body.style.color = "black";
+        
+      }
+      function changebg4() {
+         
+        document.body.style.backgroundColor = "grey";
+        document.body.style.color = "white";
+      }
+    </script>
+</body>
+</html>
