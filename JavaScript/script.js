@@ -1,9 +1,19 @@
-obj = {
+obj1 = {
   name: "Praveen",
   roll: 514,
 };
-console.log(typeof obj);
+obj2 = {
+  name: "Pranav",
+  roll: 8,
+};
+obj3 = {
+  name: "Anirudh",
+  roll: 18,
+};
+console.log(typeof obj1);
 function fun() {
-  console.log("Hello");
+  console.log(obj1);
+  console.log(obj2);
+  console.log(obj3);
 }
 fun();
