@@ -17,3 +17,4 @@ function fun() {
   console.log(obj3);
 }
 fun();
+document.write(fun());
