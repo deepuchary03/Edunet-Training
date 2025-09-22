@@ -1,262 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Amazon Clone</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" alt="Amazon">
-    </div>
-    
-    <div class="nav-search">
-      <select class="search-category">
-        <option>All</option>
-        <option>Electronics</option>
-        <option>Books</option>
-        <option>Fashion</option>
-        <option>Home</option>
-      </select>
-      <input type="text" class="search-input" placeholder="Search Amazon">
-      <button class="search-btn">
-        <i class="fas fa-search"></i>
-      </button>
-    </div>
-    
-    <div class="nav-links">
-      <div class="nav-item">
-        <span class="nav-line1">Hello, Sign in</span>
-        <span class="nav-line2">Account & Lists</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Amazon Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+          alt="Amazon"
+        />
       </div>
-      <div class="nav-item">
-        <span class="nav-line1">Returns</span>
-        <span class="nav-line2">& Orders</span>
-      </div>
-      <div class="nav-cart">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="cart-count">0</span>
-        <span class="nav-line2">Cart</span>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Sub Navigation -->
-  <div class="sub-nav">
-    <div class="sub-nav-content">
-      <a href="index.html"><i class="fas fa-home"></i> Home</a>
-      <a href="about.html">About Us</a>
-      <a href="#" class="active">Contact</a>
-      <a href="#">Today's Deals</a>
-      <a href="#">Customer Service</a>
-    </div>
-  </div>
-
-  <!-- Contact Content -->
-  <section class="contact-content">
-    <div class="container">
-      <div class="contact-hero">
-        <h1>Contact Amazon Clone</h1>
-        <p>We're here to help with your shopping experience</p>
+      <div class="nav-search">
+        <select class="search-category">
+          <option>All</option>
+          <option>Electronics</option>
+          <option>Books</option>
+          <option>Fashion</option>
+          <option>Home</option>
+        </select>
+        <input type="text" class="search-input" placeholder="Search Amazon" />
+        <button class="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
       </div>
-      
-      <div class="contact-main">
-        <div class="contact-info">
-          <h2>Get in Touch</h2>
-          <div class="contact-methods">
-            <div class="contact-method">
-              <i class="fas fa-phone"></i>
-              <div>
-                <h3>Phone Support</h3>
-                <p>1-800-AMAZON (1-800-262-9663)</p>
-                <p>24/7 Customer Service</p>
-              </div>
-            </div>
-            
-            <div class="contact-method">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h3>Email Support</h3>
-                <p>help@amazon-clone.com</p>
-                <p>Response within 24 hours</p>
-              </div>
-            </div>
-            
-            <div class="contact-method">
-              <i class="fas fa-comments"></i>
-              <div>
-                <h3>Live Chat</h3>
-                <p>Available 24/7</p>
-                <p>Instant help and support</p>
-              </div>
-            </div>
-            
-            <div class="contact-method">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h3>Address</h3>
-                <p>410 Terry Avenue North</p>
-                <p>Seattle, WA 98109, USA</p>
-              </div>
-            </div>
-          </div>
+
+      <div class="nav-links">
+        <div class="nav-item">
+          <span class="nav-line1">Hello, Sign in</span>
+          <span class="nav-line2">Account & Lists</span>
         </div>
-        
-        <div class="contact-form-section">
-          <h2>Send us a Message</h2>
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="subject">Subject *</label>
-              <select id="subject" name="subject" required>
-                <option value="">Select a topic</option>
-                <option value="order">Order Issues</option>
-                <option value="shipping">Shipping Questions</option>
-                <option value="return">Returns & Refunds</option>
-                <option value="technical">Technical Support</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" rows="6" required placeholder="Please describe your question or concern..."></textarea>
-            </div>
-            
-            <button type="submit" class="submit-btn">
-              <i class="fas fa-paper-plane"></i>
-              Send Message
-            </button>
-          </form>
+        <div class="nav-item">
+          <span class="nav-line1">Returns</span>
+          <span class="nav-line2">& Orders</span>
+        </div>
+        <div class="nav-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+          <span class="nav-line2">Cart</span>
         </div>
       </div>
-      
-      <div class="help-center">
-        <h2>Popular Help Topics</h2>
-        <div class="help-topics">
-          <div class="help-topic">
-            <i class="fas fa-truck"></i>
-            <h3>Track Your Package</h3>
-            <p>Find real-time updates on your order delivery</p>
-            <a href="#" class="help-link">Learn More →</a>
-          </div>
-          
-          <div class="help-topic">
-            <i class="fas fa-undo"></i>
-            <h3>Returns & Exchanges</h3>
-            <p>Easy returns within 30 days of purchase</p>
-            <a href="#" class="help-link">Learn More →</a>
-          </div>
-          
-          <div class="help-topic">
-            <i class="fas fa-credit-card"></i>
-            <h3>Payment Methods</h3>
-            <p>Secure payment options and account billing</p>
-            <a href="#" class="help-link">Learn More →</a>
-          </div>
-          
-          <div class="help-topic">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Account Security</h3>
-            <p>Protect your account and personal information</p>
-            <a href="#" class="help-link">Learn More →</a>
-          </div>
-        </div>
+    </nav>
+
+    <!-- Sub Navigation -->
+    <div class="sub-nav">
+      <div class="sub-nav-content">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="about.html">About Us</a>
+        <a href="#" class="active">Contact</a>
+        <a href="#">Today's Deals</a>
+        <a href="#">Customer Service</a>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-top">
+    <!-- Contact Content -->
+    <section class="contact-content">
       <div class="container">
-        <div class="footer-sections">
-          <div class="footer-section">
-            <h4>Get to Know Us</h4>
-            <ul>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">About Amazon</a></li>
-              <li><a href="#">Investor Relations</a></li>
-              <li><a href="#">Amazon Devices</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Make Money with Us</h4>
-            <ul>
-              <li><a href="#">Sell products on Amazon</a></li>
-              <li><a href="#">Sell apps on Amazon</a></li>
-              <li><a href="#">Become an Affiliate</a></li>
-              <li><a href="#">Advertise Your Products</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Amazon Payment Products</h4>
-            <ul>
-              <li><a href="#">Amazon Business Card</a></li>
-              <li><a href="#">Shop with Points</a></li>
-              <li><a href="#">Reload Your Balance</a></li>
-              <li><a href="#">Amazon Currency Converter</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Let Us Help You</h4>
-            <ul>
-              <li><a href="#">Amazon and COVID-19</a></li>
-              <li><a href="#">Your Account</a></li>
-              <li><a href="#">Your Orders</a></li>
-              <li><a href="#">Shipping Rates & Policies</a></li>
-            </ul>
-          </div>
+        <div class="contact-hero">
+          <h1>Contact Amazon Clone</h1>
+          <p>We're here to help with your shopping experience</p>
         </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="footer-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" alt="Amazon">
-        </div>
-        <div class="footer-links">
-          <a href="#">Conditions of Use</a>
-          <a href="#">Privacy Notice</a>
-          <a href="#">Interest-Based Ads</a>
-        </div>
-        <div class="footer-copyright">
-          <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
-        </div>
-      </div>
-    </div>
-  </footer>
 
-  <script>
-    // Contact form handling
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;
-      
-      if (name && email && subject && message) {
-        alert('Thank you for your message! We will get back to you within 24 hours.');
-        this.reset();
-      } else {
-        alert('Please fill in all required fields.');
-      }
-    });
-  </script>
-</body>
+        <div class="contact-main">
+          <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h3>Phone Support</h3>
+                  <p>1-800-AMAZON (1-800-262-9663)</p>
+                  <p>24/7 Customer Service</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h3>Email Support</h3>
+                  <p>help@amazon-clone.com</p>
+                  <p>Response within 24 hours</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <i class="fas fa-comments"></i>
+                <div>
+                  <h3>Live Chat</h3>
+                  <p>Available 24/7</p>
+                  <p>Instant help and support</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>410 Terry Avenue North</p>
+                  <p>Seattle, WA 98109, USA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-section">
+            <h2>Send us a Message</h2>
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject *</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a topic</option>
+                  <option value="order">Order Issues</option>
+                  <option value="shipping">Shipping Questions</option>
+                  <option value="return">Returns & Refunds</option>
+                  <option value="technical">Technical Support</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                  placeholder="Please describe your question or concern..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="help-center">
+          <h2>Popular Help Topics</h2>
+          <div class="help-topics">
+            <div class="help-topic">
+              <i class="fas fa-truck"></i>
+              <h3>Track Your Package</h3>
+              <p>Find real-time updates on your order delivery</p>
+              <a href="#" class="help-link">Learn More →</a>
+            </div>
+
+            <div class="help-topic">
+              <i class="fas fa-undo"></i>
+              <h3>Returns & Exchanges</h3>
+              <p>Easy returns within 30 days of purchase</p>
+              <a href="#" class="help-link">Learn More →</a>
+            </div>
+
+            <div class="help-topic">
+              <i class="fas fa-credit-card"></i>
+              <h3>Payment Methods</h3>
+              <p>Secure payment options and account billing</p>
+              <a href="#" class="help-link">Learn More →</a>
+            </div>
+
+            <div class="help-topic">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Account Security</h3>
+              <p>Protect your account and personal information</p>
+              <a href="#" class="help-link">Learn More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-sections">
+            <div class="footer-section">
+              <h4>Get to Know Us</h4>
+              <ul>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About Amazon</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Amazon Devices</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Make Money with Us</h4>
+              <ul>
+                <li><a href="#">Sell products on Amazon</a></li>
+                <li><a href="#">Sell apps on Amazon</a></li>
+                <li><a href="#">Become an Affiliate</a></li>
+                <li><a href="#">Advertise Your Products</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Amazon Payment Products</h4>
+              <ul>
+                <li><a href="#">Amazon Business Card</a></li>
+                <li><a href="#">Shop with Points</a></li>
+                <li><a href="#">Reload Your Balance</a></li>
+                <li><a href="#">Amazon Currency Converter</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Let Us Help You</h4>
+              <ul>
+                <li><a href="#">Amazon and COVID-19</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Your Orders</a></li>
+                <li><a href="#">Shipping Rates & Policies</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-logo">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+              alt="Amazon"
+            />
+          </div>
+          <div class="footer-links">
+            <a href="#">Conditions of Use</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Interest-Based Ads</a>
+          </div>
+          <div class="footer-copyright">
+            <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Contact form handling
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
+
+          if (name && email && subject && message) {
+            alert(
+              "Thank you for your message! We will get back to you within 24 hours."
+            );
+            this.reset();
+          } else {
+            alert("Please fill in all required fields.");
+          }
+        });
+    </script>
+  </body>
 </html>
