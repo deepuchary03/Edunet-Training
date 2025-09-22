@@ -1,5 +1,9 @@
-let = 67;
-
-//a = 90;
-
-console.log(`vlaue of b ${a}`, a);
+obj = {
+  name: "Praveen",
+  roll: 514,
+};
+console.log(typeof obj);
+function fun() {
+  console.log("Hello");
+}
+fun();
