@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Amazon Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" alt="Amazon">
+      </a>
+    </div>
+    
+    <div class="nav-search">
+      <select class="search-category">
+        <option>All</option>
+        <option>Electronics</option>
+        <option>Books</option>
+        <option>Fashion</option>
+        <option>Home</option>
+      </select>
+      <input type="text" class="search-input" placeholder="Search Amazon">
+      <button class="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+    
+    <div class="nav-links">
+      <div class="nav-item">
+        <span class="nav-line1">Hello, Sign in</span>
+        <span class="nav-line2">Account & Lists</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-line1">Returns</span>
+        <span class="nav-line2">& Orders</span>
+      </div>
+      <div class="nav-cart">
+        <a href="cart.html" style="display: flex; align-items: center; gap: 8px; color: white; text-decoration: none;">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">3</span>
+          <span class="nav-line2">Cart</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sub Navigation -->
+  <div class="sub-nav">
+    <div class="sub-nav-content">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+      <a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+      <a href="#"><i class="fas fa-bars"></i> All Categories</a>
+      <a href="#">Today's Deals</a>
+      <a href="#">Customer Service</a>
+      <a href="#">Gift Cards</a>
+    </div>
+  </div>
+
+  <!-- Cart Content -->
+  <div class="cart-container">
+    <div class="container">
+      <div class="cart-header">
+        <h1><i class="fas fa-shopping-cart"></i> Shopping Cart</h1>
+        <p class="cart-subtitle">Review your items and proceed to checkout</p>
+      </div>
+
+      <div class="cart-main">
+        <!-- Cart Items Section -->
+        <div class="cart-items">
+          <div class="cart-items-header">
+            <h2>Cart Items (3)</h2>
+            <a href="index.html" class="continue-shopping">
+              <i class="fas fa-arrow-left"></i> Continue Shopping
+            </a>
+          </div>
+
+          <!-- Cart Item 1 -->
+          <div class="cart-item">
+            <div class="item-image">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/61VuVU94RnL._AC_SL1000_.jpg" alt="Gaming Laptop">
+            </div>
+            <div class="item-details">
+              <h3>Gaming Laptop - High Performance</h3>
+              <p class="item-description">15.6" Full HD Display, Intel Core i7, 16GB RAM, 512GB SSD, NVIDIA RTX 3060</p>
+              <div class="item-rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-count">(1,234 reviews)</span>
+              </div>
+              <div class="item-availability">
+                <i class="fas fa-check-circle"></i>
+                <span>In Stock - Ships within 2-3 business days</span>
+              </div>
+            </div>
+            <div class="item-quantity">
+              <label for="qty1">Qty:</label>
+              <select id="qty1" class="quantity-select">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="item-price">
+              <span class="current-price">₹65,999</span>
+              <span class="original-price">₹79,999</span>
+              <span class="savings">Save ₹13,000</span>
+            </div>
+            <div class="item-actions">
+              <button class="remove-item">
+                <i class="fas fa-trash"></i> Remove
+              </button>
+              <button class="save-later">
+                <i class="fas fa-heart"></i> Save for Later
+              </button>
+            </div>
+          </div>
+
+          <!-- Cart Item 2 -->
+          <div class="cart-item">
+            <div class="item-image">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/71jG+e7roXL._AC_SL1500_.jpg" alt="Wireless Headphones">
+            </div>
+            <div class="item-details">
+              <h3>Wireless Bluetooth Headphones</h3>
+              <p class="item-description">Active Noise Cancellation, 30-Hour Battery Life, Premium Sound Quality</p>
+              <div class="item-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-count">(2,156 reviews)</span>
+              </div>
+              <div class="item-availability">
+                <i class="fas fa-check-circle"></i>
+                <span>In Stock - Ships today with Prime delivery</span>
+              </div>
+            </div>
+            <div class="item-quantity">
+              <label for="qty2">Qty:</label>
+              <select id="qty2" class="quantity-select">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="item-price">
+              <span class="current-price">₹4,998</span>
+              <span class="original-price">₹7,998</span>
+              <span class="savings">Save ₹3,000</span>
+            </div>
+            <div class="item-actions">
+              <button class="remove-item">
+                <i class="fas fa-trash"></i> Remove
+              </button>
+              <button class="save-later">
+                <i class="fas fa-heart"></i> Save for Later
+              </button>
+            </div>
+          </div>
+
+          <!-- Cart Item 3 -->
+          <div class="cart-item">
+            <div class="item-image">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/61BfJe3f7wL._AC_SL1000_.jpg" alt="Smartphone">
+            </div>
+            <div class="item-details">
+              <h3>Smartphone 128GB - Latest Model</h3>
+              <p class="item-description">6.1" Super Retina Display, Triple Camera System, A15 Bionic Chip, 5G Ready</p>
+              <div class="item-rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-count">(856 reviews)</span>
+              </div>
+              <div class="item-availability">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Only 2 left in stock - Order soon</span>
+              </div>
+            </div>
+            <div class="item-quantity">
+              <label for="qty3">Qty:</label>
+              <select id="qty3" class="quantity-select">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="item-price">
+              <span class="current-price">₹24,999</span>
+              <span class="original-price">₹29,999</span>
+              <span class="savings">Save ₹5,000</span>
+            </div>
+            <div class="item-actions">
+              <button class="remove-item">
+                <i class="fas fa-trash"></i> Remove
+              </button>
+              <button class="save-later">
+                <i class="fas fa-heart"></i> Save for Later
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart Summary Section -->
+        <div class="cart-summary">
+          <div class="summary-card">
+            <h3><i class="fas fa-calculator"></i> Order Summary</h3>
+            
+            <div class="summary-row">
+              <span>Subtotal (4 items):</span>
+              <span>₹95,996</span>
+            </div>
+            
+            <div class="summary-row">
+              <span>Shipping & Handling:</span>
+              <span class="free">FREE</span>
+            </div>
+            
+            <div class="summary-row">
+              <span>Total before tax:</span>
+              <span>₹95,996</span>
+            </div>
+            
+            <div class="summary-row">
+              <span>Estimated tax:</span>
+              <span>₹8,639</span>
+            </div>
+            
+            <div class="summary-row total">
+              <span>Order Total:</span>
+              <span>₹1,04,635</span>
+            </div>
+            
+            <div class="savings-info">
+              <i class="fas fa-tags"></i>
+              <span>Your savings: <strong>₹21,000</strong></span>
+            </div>
+
+            <button class="checkout-btn">
+              <i class="fas fa-lock"></i>
+              Proceed to Checkout
+            </button>
+
+            <div class="payment-options">
+              <h4>We Accept:</h4>
+              <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fas fa-university"></i>
+              </div>
+            </div>
+
+            <div class="security-badges">
+              <div class="security-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure Checkout</span>
+              </div>
+              <div class="security-item">
+                <i class="fas fa-truck"></i>
+                <span>Free Shipping</span>
+              </div>
+              <div class="security-item">
+                <i class="fas fa-undo"></i>
+                <span>Easy Returns</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recommendations -->
+          <div class="recommendations">
+            <h3><i class="fas fa-lightbulb"></i> Customers who bought these items also bought</h3>
+            
+            <div class="recommendation-item">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51E6ijlnpiL._AC_SL1024_.jpg" alt="Smart Watch">
+              <div class="rec-details">
+                <h4>Smart Watch</h4>
+                <div class="rec-rating">
+                  <span class="stars">★★★★☆</span>
+                  <span>(1,845)</span>
+                </div>
+                <div class="rec-price">₹3,999</div>
+              </div>
+              <button class="add-to-cart-small">Add to Cart</button>
+            </div>
+
+            <div class="recommendation-item">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/71qid7QFUEL._AC_SL1500_.jpg" alt="Bluetooth Speaker">
+              <div class="rec-details">
+                <h4>Bluetooth Speaker</h4>
+                <div class="rec-rating">
+                  <span class="stars">★★★★★</span>
+                  <span>(3,254)</span>
+                </div>
+                <div class="rec-price">₹1,799</div>
+              </div>
+              <button class="add-to-cart-small">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-sections">
+          <div class="footer-section">
+            <h4>Get to Know Us</h4>
+            <ul>
+              <li><a href="#">Careers</a></li>
+              <li><a href="about.html">About Amazon</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">Amazon Devices</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Make Money with Us</h4>
+            <ul>
+              <li><a href="#">Sell products on Amazon</a></li>
+              <li><a href="#">Sell apps on Amazon</a></li>
+              <li><a href="#">Become an Affiliate</a></li>
+              <li><a href="#">Advertise Your Products</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Amazon Payment Products</h4>
+            <ul>
+              <li><a href="#">Amazon Business Card</a></li>
+              <li><a href="#">Shop with Points</a></li>
+              <li><a href="#">Reload Your Balance</a></li>
+              <li><a href="#">Amazon Currency Converter</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Let Us Help You</h4>
+            <ul>
+              <li><a href="#">Amazon and COVID-19</a></li>
+              <li><a href="#">Your Account</a></li>
+              <li><a href="#">Your Orders</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" alt="Amazon">
+        </div>
+        <div class="footer-links">
+          <a href="#">Conditions of Use</a>
+          <a href="#">Privacy Notice</a>
+          <a href="#">Interest-Based Ads</a>
+        </div>
+        <div class="footer-copyright">
+          <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Clone - Online Shopping</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+          alt="Amazon"
+        />
+      </div>
+
+      <div class="nav-search">
+        <select class="search-category">
+          <option>All</option>
+          <option>Electronics</option>
+          <option>Books</option>
+          <option>Fashion</option>
+          <option>Home</option>
+        </select>
+        <input type="text" class="search-input" placeholder="Search Amazon" />
+        <button class="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+
+      <div class="nav-links">
+        <div class="nav-item">
+          <span class="nav-line1">Hello, Sign in</span>
+          <span class="nav-line2">Account & Lists</span>
+        </div>
+        <div class="nav-item">
+          <span class="nav-line1">Returns</span>
+          <span class="nav-line2">& Orders</span>
+        </div>
+        <div class="nav-cart">
+          <a href="cart.html" style="display: flex; align-items: center; gap: 8px; color: white; text-decoration: none;">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+            <span class="nav-line2">Cart</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sub Navigation -->
+    <div class="sub-nav">
+      <div class="sub-nav-content">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+        <a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+        <a href="#"><i class="fas fa-bars"></i> All Categories</a>
+        <a href="#">Today's Deals</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Gift Cards</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_45M_v2_1x._CB432458380_.jpg"
+          alt="Hero Banner"
+        />
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+      <div class="container">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61VuVU94RnL._AC_SL1000_.jpg"
+              alt="Laptop"
+            />
+            <div class="product-info">
+              <h3>Gaming Laptop</h3>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-count">(1,234)</span>
+              </div>
+              <div class="price">
+                <span class="current-price">₹65,999</span>
+                <span class="original-price">₹79,999</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/71jG+e7roXL._AC_SL1500_.jpg"
+              alt="Headphones"
+            />
+            <div class="product-info">
+              <h3>Wireless Headphones</h3>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-count">(2,156)</span>
+              </div>
+              <div class="price">
+                <span class="current-price">₹2,499</span>
+                <span class="original-price">₹3,999</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61BfJe3f7wL._AC_SL1000_.jpg"
+              alt="Smartphone"
+            />
+            <div class="product-info">
+              <h3>Smartphone 128GB</h3>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-count">(856)</span>
+              </div>
+              <div class="price">
+                <span class="current-price">₹24,999</span>
+                <span class="original-price">₹29,999</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/51E6ijlnpiL._AC_SL1024_.jpg"
+              alt="Smart Watch"
+            />
+            <div class="product-info">
+              <h3>Smart Watch</h3>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-count">(1,845)</span>
+              </div>
+              <div class="price">
+                <span class="current-price">₹3,999</span>
+                <span class="original-price">₹5,999</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/61iTK0-commL._AC_SL1500_.jpg"
+              alt="Tablet"
+            />
+            <div class="product-info">
+              <h3>Tablet 10.1 inch</h3>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-count">(967)</span>
+              </div>
+              <div class="price">
+                <span class="current-price">₹15,999</span>
+                <span class="original-price">₹19,999</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/71qid7QFUEL._AC_SL1500_.jpg"
+              alt="Bluetooth Speaker"
+            />
+            <div class="product-info">
+              <h3>Bluetooth Speaker</h3>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-count">(3,254)</span>
+              </div>
+              <div class="price">
+                <span class="current-price">₹1,799</span>
+                <span class="original-price">₹2,999</span>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+      <div class="container">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+          <div class="category-item">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+              alt="Electronics"
+            />
+            <h3>Electronics</h3>
+          </div>
+          <div class="category-item">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_1x._SY304_CB432774322_.jpg"
+              alt="Beauty"
+            />
+            <h3>Beauty & Personal Care</h3>
+          </div>
+          <div class="category-item">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_HomeGarden_1x._SY304_CB432774322_.jpg"
+              alt="Home"
+            />
+            <h3>Home & Garden</h3>
+          </div>
+          <div class="category-item">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Fashion_1x._SY304_CB432774322_.jpg"
+              alt="Fashion"
+            />
+            <h3>Fashion</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-sections">
+            <div class="footer-section">
+              <h4>Get to Know Us</h4>
+              <ul>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About Amazon</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Amazon Devices</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Make Money with Us</h4>
+              <ul>
+                <li><a href="#">Sell products on Amazon</a></li>
+                <li><a href="#">Sell apps on Amazon</a></li>
+                <li><a href="#">Become an Affiliate</a></li>
+                <li><a href="#">Advertise Your Products</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Amazon Payment Products</h4>
+              <ul>
+                <li><a href="#">Amazon Business Card</a></li>
+                <li><a href="#">Shop with Points</a></li>
+                <li><a href="#">Reload Your Balance</a></li>
+                <li><a href="#">Amazon Currency Converter</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Let Us Help You</h4>
+              <ul>
+                <li><a href="#">Amazon and COVID-19</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Your Orders</a></li>
+                <li><a href="#">Shipping Rates & Policies</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-logo">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+              alt="Amazon"
+            />
+          </div>
+          <div class="footer-links">
+            <a href="#">Conditions of Use</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Interest-Based Ads</a>
+          </div>
+          <div class="footer-copyright">
+            <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
