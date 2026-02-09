@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      body {
+        background-color: skyblue;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <h1 align="center">Registration Form</h1>
+      <form id="register" onsubmit="a()">
+      <table align="center" style="padding: 20px">
+        <tr>
+          <td><label>Username:</label></td>
+          <td><input id="username" type="text"  placeholder="enter your name"/></td>
+        </tr>
+        <tr>
+          <td><label>Email:</label></td>
+          <td><input id="email" type="email"  placeholder="enter your email"/></td>
+        </tr>
+        <tr>
+          <td><label>Phone number:</label></td>
+          <td><input id="phone" type="text"  placeholder="enter your phone number"/></td>
+        </tr>
+        <tr>
+          <td><label>Pasword:</label></td>
+          <td><input id="password" type="text"  placeholder="enter your password"/></td>
+        </tr>
+        <tr>
+          <td><input type="submit" /></td>
+          <td><input type="reset" /></td>
+        </tr>
+      </table>
+      </form>
+      <script>
+        function a(){
+         let username = document.getElementById("username").value;
+          let email = document.getElementById("email").value;
+          let phone = document.getElementById("phone").value;
+          let password = document.getElementById("password").value;
+
+            document.write(
+            "Username: " + username  +
+            "Email: " + email +
+            "Phone: " + phone + 
+            "Password: " + password
+          );}
+      </script>
+    </div>
+  </body>
+</html>

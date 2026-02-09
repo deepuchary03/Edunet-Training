@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cont {
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 200px 200px 200px;
+        grid-gap: 20px;
+      }
+
+      .c {
+        position: relative; /* make container the positioning context */
+        border: 10px solid black;
+        background-color: orange;
+      }
+
+      .c img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .c p {
+        position: absolute;
+        bottom: 10px;  /* text at bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        color: black;
+        font-weight: bold;
+        background: white;/* for readability */
+       border-radius: 5px;
+       padding: 5px;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div class="c">
+        <img src="./t.jpg" alt="Tirupathi">
+        <p>Tirupathi</p>
+      </div>
+      <div class="c">
+
+          <img src="./s.jpg" alt="Tirupathi">
+        <p>Srisailam</p>
+      </div>
+      <div class="c">
+         <img src="./Sree-Venkateswara-Swamy-Devastha.jpg" alt="Tirupathi">
+        <p>Swarnagiri</p>
+      </div>
+      <div class="c">    <img src="./Sree-Venkateswara-Swamy-Devastha.jpg" alt="Tirupathi">
+        <p>Swarnagiri</p></div>
+      <div class="c"> <img src="./t.jpg" alt="Tirupathi">
+        <p>Tirupathi</p></div>
+      <div class="c">     <img src="./s.jpg" alt="Tirupathi">
+        <p>Srisailam</p></div>
+      <div class="c">  <img src="./s.jpg" alt="Tirupathi">
+        <p>Srisailam</p>></div>
+    </div>
+  </body>
+</html>
