@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Agency</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --sand: #f5efe6;
+        --ink: #1a1b1f;
+        --ocean: #0f6b6f;
+        --sunset: #e7a25a;
+        --reef: #2b8c7c;
+        --mist: #f9f6f1;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Karla", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(
+            1200px 600px at 10% -10%,
+            #fff1db 0%,
+            transparent 60%
+          ),
+          radial-gradient(900px 500px at 110% 20%, #e1f2ee 0%, transparent 55%),
+          var(--sand);
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(8px);
+        background: rgba(245, 239, 230, 0.8);
+        border-bottom: 1px solid rgba(26, 27, 31, 0.08);
+      }
+
+      .nav {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        letter-spacing: 0.5px;
+      }
+
+      .brand-badge {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: conic-gradient(
+          from 210deg,
+          var(--ocean),
+          var(--reef),
+          var(--sunset)
+        );
+        display: grid;
+        place-items: center;
+        color: white;
+        font-weight: 700;
+        font-family: "Karla", sans-serif;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--ink);
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        opacity: 1;
+      }
+
+      .nav-cta {
+        padding: 10px 18px;
+        border-radius: 999px;
+        border: 1px solid var(--ink);
+        text-decoration: none;
+        color: var(--ink);
+        font-weight: 600;
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .nav-cta:hover {
+        transform: translateY(-2px);
+        background: white;
+      }
+
+      .hero {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 80px 24px 48px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 36px;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(36px, 5vw, 54px);
+        margin: 0 0 16px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 0 0 24px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .primary-btn,
+      .ghost-btn {
+        padding: 12px 20px;
+        border-radius: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .primary-btn {
+        background: var(--ocean);
+        color: white;
+        box-shadow: 0 10px 24px rgba(15, 107, 111, 0.25);
+      }
+
+      .ghost-btn {
+        border: 1px solid rgba(26, 27, 31, 0.2);
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.6);
+      }
+
+      .hero-card {
+        background: white;
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 24px 60px rgba(26, 27, 31, 0.12);
+      }
+
+      .hero-card h2 {
+        margin: 0 0 12px;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--ocean);
+      }
+
+      .trip-list {
+        display: grid;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .trip-item {
+        padding: 14px;
+        border-radius: 12px;
+        background: var(--mist);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .trip-item span {
+        font-weight: 600;
+      }
+
+      .section {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 24px 80px;
+      }
+
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+        margin-bottom: 18px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 18px;
+        padding: 18px;
+        box-shadow: 0 18px 40px rgba(26, 27, 31, 0.08);
+        transition: transform 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .carousel-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 24px 60px rgba(26, 27, 31, 0.15);
+      }
+
+      .carousel-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-slide {
+        min-width: 100%;
+        position: relative;
+        background: white;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .carousel-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(26, 27, 31, 0.9), transparent);
+        padding: 40px 30px 30px;
+        color: white;
+      }
+
+      .carousel-content h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+        margin: 0 0 8px;
+      }
+
+      .carousel-content p {
+        margin: 0;
+        font-size: 16px;
+        opacity: 0.95;
+      }
+
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        pointer-events: none;
+      }
+
+      .carousel-btn {
+        pointer-events: all;
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 12px rgba(26, 27, 31, 0.2);
+      }
+
+      .carousel-btn:hover {
+        background: white;
+        transform: scale(1.1);
+      }
+
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .carousel-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(26, 27, 31, 0.2);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+        padding: 0;
+      }
+
+      .carousel-dot.active {
+        background: var(--ocean);
+        width: 30px;
+        border-radius: 5px;
+      }
+
+      .agent-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+      }
+
+      .agent-card {
+        background: white;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(26, 27, 31, 0.08);
+      }
+
+      .agent-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .agent-card-body {
+        padding: 16px;
+      }
+
+      .agent-card-body p {
+        margin: 0;
+        color: rgba(26, 27, 31, 0.7);
+        font-size: 14px;
+      }
+
+      .empty-state {
+        padding: 20px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px dashed rgba(26, 27, 31, 0.2);
+      }
+
+      .agent-controls {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .search-box {
+        flex: 1;
+        min-width: 240px;
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 1px solid rgba(26, 27, 31, 0.15);
+        font-family: "Karla", sans-serif;
+        font-size: 14px;
+        background: white;
+        transition: border-color 0.2s ease;
+      }
+
+      .search-box:focus {
+        outline: none;
+        border-color: var(--ocean);
+      }
+
+      .filter-buttons {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(26, 27, 31, 0.15);
+        background: white;
+        font-family: "Karla", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .filter-btn:hover {
+        background: var(--mist);
+      }
+
+      .filter-btn.active {
+        background: var(--ocean);
+        color: white;
+        border-color: var(--ocean);
+      }
+
+      .agent-card.hidden {
+        display: none;
+      }
+
+      @media (max-width: 720px) {
+        .nav {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      @keyframes floatIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero,
+      .section {
+        animation: floatIn 0.6s ease both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <nav class="nav">
+          <div class="brand">
+            <div class="brand-badge">TA</div>
+            Terra Atlas
+          </div>
+          <div class="nav-links">
+            <a href="#journeys">Journeys</a>
+            <a href="#agents">Our agents</a>
+          </div>
+          <a class="nav-cta" href="#agents">Contact an agent</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div>
+            <h1>Curated travel, crafted like a story.</h1>
+            <p>
+              We build small-group getaways and private escapes with guides who
+              know every hidden beach, vineyard, and skyline view.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-btn" href="#agents">Meet our agents</a>
+              <a class="ghost-btn" href="#journeys">Browse journeys</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h2>Featured Departures</h2>
+            <ul class="trip-list">
+              <li class="trip-item">Amalfi Coast escape <span>May 18</span></li>
+              <li class="trip-item">Kyoto spring trails <span>Apr 03</span></li>
+              <li class="trip-item">
+                Morocco desert night <span>Jun 11</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" id="journeys">
+          <div class="section-title">Journeys designed for balance</div>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" id="carouselWrapper">
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=800&fit=crop" alt="Coastal Retreats" />
+                <div class="carousel-content">
+                  <h3>Coastal Retreats</h3>
+                  <p>Private transfers, sunrise sails, and wellness stops.</p>
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop" alt="Wild Landscapes" />
+                <div class="carousel-content">
+                  <h3>Wild Landscapes</h3>
+                  <p>Nature-first itineraries with expert field guides.</p>
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&h=800&fit=crop" alt="Cultural Immersion" />
+                <div class="carousel-content">
+                  <h3>Cultural Immersion</h3>
+                  <p>Studio visits, artisan markets, and after-hours access.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-btn" id="prevBtn">‹</button>
+              <button class="carousel-btn" id="nextBtn">›</button>
+            </div>
+          </div>
+          <div class="carousel-dots" id="carouselDots"></div>
+        </section>
+
+        <section class="section" id="agents">
+          <div class="section-title">Meet our travel experts</div>
+          {% if agents %}
+          <div class="agent-controls">
+            <input
+              type="text"
+              id="agentSearch"
+              class="search-box"
+              placeholder="Search by name, email, or agent code..."
+            />
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="name-asc">Name A-Z</button>
+              <button class="filter-btn" data-filter="name-desc">Name Z-A</button>
+              <button class="filter-btn" data-filter="code-asc">Code ↑</button>
+              <button class="filter-btn" data-filter="code-desc">Code ↓</button>
+            </div>
+          </div>
+          <div class="agent-grid" id="agentGrid">
+            {% for agent in agents %}
+            <article class="agent-card" data-name="{{ agent.name|lower }}" data-email="{{ agent.email|lower }}" data-code="{{ agent.agentcode }}">
+              {% if agent.image_url %}
+              <img src="{{ agent.image_url }}" alt="{{ agent.name }}" />
+              {% endif %}
+              <div class="agent-card-body">
+                <h3>{{ agent.name }}</h3>
+                <p>{{ agent.email }}</p>
+                <p>Agent code: {{ agent.agentcode }}</p>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+          {% else %}
+          <div class="empty-state">No agents added yet.</div>
+          {% endif %}
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Carousel functionality
+      const carouselWrapper = document.getElementById('carouselWrapper');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const dotsContainer = document.getElementById('carouselDots');
+      const slides = document.querySelectorAll('.carousel-slide');
+      let currentIndex = 0;
+      let autoPlayInterval;
+
+      // Create dots
+      slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.classList.add('carousel-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = document.querySelectorAll('.carousel-dot');
+
+      function updateCarousel() {
+        carouselWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
+      }
+
+      function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+        resetAutoPlay();
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+      }
+
+      function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 4000);
+      }
+
+      function resetAutoPlay() {
+        clearInterval(autoPlayInterval);
+        startAutoPlay();
+      }
+
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+      });
+
+      // Start auto-play
+      startAutoPlay();
+
+      // Pause on hover
+      document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+        clearInterval(autoPlayInterval);
+      });
+
+      document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
+        startAutoPlay();
+      });
+
+      // Search and filter functionality for agents
+      const searchBox = document.getElementById('agentSearch');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const agentGrid = document.getElementById('agentGrid');
+      const agentCards = document.querySelectorAll('.agent-card');
+
+      let currentFilter = 'all';
+
+      // Search functionality
+      if (searchBox) {
+        searchBox.addEventListener('input', (e) => {
+          const searchTerm = e.target.value.toLowerCase();
+          
+          agentCards.forEach(card => {
+            const name = card.dataset.name || '';
+            const email = card.dataset.email || '';
+            const code = card.dataset.code || '';
+            
+            const matches = name.includes(searchTerm) || 
+                          email.includes(searchTerm) || 
+                          code.includes(searchTerm);
+            
+            card.classList.toggle('hidden', !matches);
+          });
+        });
+      }
+
+      // Filter functionality
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Update active state
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          
+          const filter = btn.dataset.filter;
+          currentFilter = filter;
+          
+          // Convert NodeList to array for sorting
+          const cardsArray = Array.from(agentCards);
+          
+          // Sort based on filter
+          let sortedCards;
+          switch(filter) {
+            case 'name-asc':
+              sortedCards = cardsArray.sort((a, b) => 
+                (a.dataset.name || '').localeCompare(b.dataset.name || '')
+              );
+              break;
+            case 'name-desc':
+              sortedCards = cardsArray.sort((a, b) => 
+                (b.dataset.name || '').localeCompare(a.dataset.name || '')
+              );
+              break;
+            case 'code-asc':
+              sortedCards = cardsArray.sort((a, b) => 
+                parseInt(a.dataset.code || '0') - parseInt(b.dataset.code || '0')
+              );
+              break;
+            case 'code-desc':
+              sortedCards = cardsArray.sort((a, b) => 
+                parseInt(b.dataset.code || '0') - parseInt(a.dataset.code || '0')
+              );
+              break;
+            default:
+              // Reset to original order (no sorting)
+              sortedCards = cardsArray;
+          }
+          
+          // Re-append in sorted order
+          if (filter !== 'all') {
+            sortedCards.forEach(card => agentGrid.appendChild(card));
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

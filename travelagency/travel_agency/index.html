@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Travel Agency - Agents</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1a1a1a;
+        --muted: #59636d;
+        --sand: #f7f0e6;
+        --sea: #1e6a72;
+        --sun: #f2a900;
+        --card: #ffffff;
+        --line: #e6e0d7;
+        --shadow: 0 18px 40px rgba(20, 26, 31, 0.15);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: "Source Sans 3", "Segoe UI", Tahoma, sans-serif;
+        background:
+          radial-gradient(1200px 800px at 15% -10%, #ffd59a 0%, transparent 60%),
+          radial-gradient(900px 600px at 100% 0%, #c5f1f0 0%, transparent 55%),
+          linear-gradient(135deg, #f8f3ec 0%, #eef5f4 100%);
+        min-height: 100vh;
+        padding: 48px 18px 64px;
+      }
+
+      .shell {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        display: grid;
+        gap: 18px;
+        padding: 28px 32px;
+        background: var(--card);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+        animation: lift 700ms ease both;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -120px;
+        top: -120px;
+        width: 260px;
+        height: 260px;
+        background: conic-gradient(from 130deg, #f9c269, #f2a900, #ffddb1);
+        opacity: 0.35;
+        border-radius: 50%;
+      }
+
+      h1 {
+        font-family: "Fraunces", "Georgia", serif;
+        font-size: clamp(28px, 4vw, 44px);
+        margin: 0;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        font-size: 1.05rem;
+        margin: 0;
+        max-width: 640px;
+      }
+
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .chip {
+        background: var(--sand);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 14px;
+        font-weight: 600;
+        color: var(--sea);
+        letter-spacing: 0.02em;
+      }
+
+      .panel {
+        margin-top: 28px;
+        background: var(--card);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        padding: 24px;
+        animation: lift 900ms ease both;
+      }
+
+      .panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+      }
+
+      .panel-header h2 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .count {
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      thead {
+        background: #f1f6f5;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.75rem;
+      }
+
+      th,
+      td {
+        padding: 14px 16px;
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+      }
+
+      tbody tr {
+        background: #fff;
+        transition: transform 200ms ease, box-shadow 200ms ease;
+      }
+
+      tbody tr:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 18px rgba(27, 36, 43, 0.08);
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .status-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #43b581;
+        box-shadow: 0 0 0 3px rgba(67, 181, 129, 0.15);
+      }
+
+      @keyframes lift {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 720px) {
+        body {
+          padding-top: 32px;
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <section class="hero">
+        <h1>Travel Agency Agents</h1>
+        <p class="subtitle">
+          Meet the crew who craft journeys worth remembering. Browse active
+          agents and reach out to plan the next escape.
+        </p>
+        <div class="meta-row">
+          <span class="chip">Worldwide Coverage</span>
+          <span class="chip">Personalized Itineraries</span>
+          <span class="chip">24/7 Support</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Agent Directory</h2>
+          <div class="status">
+            <span class="status-dot"></span>
+            <span>Live sync</span>
+            <span class="count" id="agentCount">0 agents</span>
+          </div>
+        </div>
+
+        <table id="agentTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </div>
+
+    <script>
+      fetch("http://127.0.0.1:8000/api/agents/")
+        .then((response) => response.json())
+        .then((data) => {
+          const tableBody = document.querySelector("#agentTable tbody");
+          const agentCount = document.querySelector("#agentCount");
+
+          data.forEach((agent) => {
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+                        <td>${agent.id}</td>
+                        <td>${agent.name}</td>
+                        <td>${agent.email}</td>
+                      
+                    `;
+
+            tableBody.appendChild(row);
+          });
+
+          if (agentCount) {
+            const total = data.length;
+            agentCount.textContent = `${total} agent${total === 1 ? "" : "s"}`;
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    </script>
+  </body>
+</html>
