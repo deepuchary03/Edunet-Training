@@ -26,7 +26,9 @@ def user_login(request):
     return render(request, 'user_login.html')
 
 def dashboard(request):
-    return render(request, 'dashboard.html')
+    if request.user.is_authenticated:
+        return render(request, 'dashboard.html')
+    return redirect('user_login')
 
 
 

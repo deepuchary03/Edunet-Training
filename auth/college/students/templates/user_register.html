@@ -3,31 +3,234 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Register</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+      :root {
+        --bg: #0b0f14;
+        --panel: #141b28;
+        --card: #1a2232;
+        --text: #eef2f6;
+        --muted: #9aa3b2;
+        --accent: #ffb144;
+        --accent-2: #5ee4d6;
+        --border: rgba(255, 255, 255, 0.08);
+        --shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Space Grotesk", "Segoe UI", sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at 10% 20%, #1f2b46, var(--bg) 40%),
+          radial-gradient(circle at 90% 0%, #26354f, transparent 55%),
+          radial-gradient(circle at 80% 80%, #1a2e2a, transparent 45%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 20px;
+      }
+
+      .shell {
+        width: min(1000px, 100%);
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        gap: 24px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 30px;
+        display: grid;
+        gap: 18px;
+        box-shadow: var(--shadow);
+      }
+
+      .card h2 {
+        margin: 0;
+        font-size: 1.6rem;
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+
+      label {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      input {
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
+        padding: 12px 14px;
+        color: var(--text);
+        font-size: 1rem;
+        outline: none;
+        transition: border 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      input:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(255, 177, 68, 0.2);
+      }
+
+      button {
+        border: none;
+        border-radius: 14px;
+        padding: 12px 16px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: #0b0f14;
+        background: linear-gradient(120deg, var(--accent), #ffd28a);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 30px rgba(255, 177, 68, 0.3);
+      }
+
+      .info {
+        padding: 32px;
+        border-radius: 24px;
+        background: linear-gradient(135deg, rgba(255, 177, 68, 0.14), rgba(94, 228, 214, 0.12));
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .info::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, rgba(255, 255, 255, 0.05), transparent 55%);
+      }
+
+      .info h1 {
+        font-family: "Playfair Display", "Times New Roman", serif;
+        font-size: clamp(2.1rem, 3vw, 2.8rem);
+        margin: 0 0 12px;
+      }
+
+      .info p {
+        margin: 0 0 20px;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .steps {
+        display: grid;
+        gap: 12px;
+      }
+
+      .step {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        padding: 12px 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+      }
+
+      .badge {
+        background: var(--accent-2);
+        color: #0b0f14;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .helper {
+        color: var(--muted);
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .shell {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
-    <form method="post">
-      <h2>Register Page</h2>
-      {% csrf_token %}
-      <input
-        type="text"
-        name="username"
-        placeholder="enter Username"
-        required
-      /><br />
-      <input
-        type="password"
-        name="password"
-        placeholder="enter Password"
-        required
-      /><br />
-      <input
-        type="password"
-        name="confirmpassword"
-        placeholder="enter Confirm Password"
-        required
-      /><br />
-      <button type="submit">Register</button>
-    </form>
+    <main class="shell">
+      <section class="card">
+        <h2>Create your account</h2>
+        <form method="post">
+          {% csrf_token %}
+          <div class="field">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Choose a username"
+              autocomplete="username"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password"
+              autocomplete="new-password"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="confirmpassword">Confirm password</label>
+            <input
+              type="password"
+              id="confirmpassword"
+              name="confirmpassword"
+              placeholder="Confirm your password"
+              autocomplete="new-password"
+              required
+            />
+          </div>
+          <button type="submit">Register</button>
+        </form>
+        <div class="helper">Join the student community in minutes.</div>
+      </section>
+
+      <section class="info">
+        <h1>Start your journey</h1>
+        <p>Create an account to unlock curated resources, announcements, and a personalized dashboard.</p>
+        <div class="steps">
+          <div class="step">
+            <span>Create profile</span>
+            <span class="badge">Step 1</span>
+          </div>
+          <div class="step">
+            <span>Verify details</span>
+            <span class="badge">Step 2</span>
+          </div>
+          <div class="step">
+            <span>Access dashboard</span>
+            <span class="badge">Step 3</span>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
